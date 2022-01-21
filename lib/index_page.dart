@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './grid_view_page.dart';
+import 'sliver_app_bar_page.dart';
 
 class IndexPage extends StatelessWidget {
   const IndexPage({Key? key}) : super(key: key);
@@ -21,6 +22,19 @@ class IndexPage extends StatelessWidget {
                 }));
               },
               child: Text("GridView"),
+            ),
+          ),
+          Padding(
+            padding:
+                const EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const SliverAppBarPage();
+                }));
+              },
+              child: Text("SliverAppBar"),
             ),
           ),
         ],
